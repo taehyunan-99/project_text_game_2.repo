@@ -77,6 +77,8 @@ class BattleManager:
                     print(f"✅ 현재 남은 체력 : {user.hp}\n")
                     time.sleep(1)
                 self.coin = not self.coin
+                
+        # 전투 결과 표시
         print("📜 [ 전투 결과 ] 📜\n")
         if user.hp > 0:
             print("🏆 승리 🏆\n")
