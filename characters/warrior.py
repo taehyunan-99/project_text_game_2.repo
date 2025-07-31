@@ -4,10 +4,10 @@ class Warrior(Character):
     def __init__(self, name):
         super().__init__(name, cls_name="🛡️ 전사", level=1, hp=110, max_hp=100, power=10, win_count=0, life_point=3)
 
-    def attack(self, target):
+    def attack(self, target: Character):
         target.take_damage(self.power)
     
-    def special_attack(self, target):
+    def special_attack(self, target: Character):
         if self.hp < 40:
             target.take_damage(self.power * 3)
             self.hp += 10
